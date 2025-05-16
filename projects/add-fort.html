@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Fort | Sawai Trekkers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 30px 25px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #ffcc70;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      background-color: #ffffffcc;
+      color: #000;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffb347;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffcc70;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Add New Fort</h2>
+    <form id="fortForm">
+      <div class="form-group">
+        <label for="fortName">Fort Name</label>
+        <input type="text" id="fortName" name="fortName" placeholder="e.g., Harishchandragad" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="District / Region" required>
+      </div>
+
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="url" id="imageUrl" name="imageUrl" placeholder="https://example.com/fort.jpg" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Short Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Describe fort, history or trek info..." required></textarea>
+      </div>
+
+      <button type="submit">Save Fort</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("fortForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Fort submitted successfully!");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
+
