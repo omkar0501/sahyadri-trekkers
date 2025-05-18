@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harihargad Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Harihargad Fort (Harshagad)</h1>
+
+  <p>
+    Harihargad Fort, also known as Harshagad, is a historic hill fort located in the Nashik district of Maharashtra, India. Situated at an elevation of 3,676 feet above sea level, it offers panoramic views of the surrounding Sahyadri range.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Built during the Yadava period, Harihargad Fort was later surrendered to Khan Zamam in 1636 along with other forts. It was captured by Captain Briggs in 1818 along with 17 other forts. The fort's strategic location made it an important watchtower for the trade route through Gonda Ghat.
+  </p>
+
+  <h3>Trekking and Accessibility</h3>
+  <p>
+    The fort is accessible via two base villages: Harshewadi and Nirgudpada. The trek from Nirgudpada is more challenging due to its steep rock-cut stairs, while the route from Harshewadi is relatively easier. The trek involves navigating through scrub forests and ascending rock-cut steps, including an iconic 80-degree incline.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>117 rock-cut steps leading to the summit</li>
+    <li>Small temple of Lord Hanuman and Lord Shiva</li>
+    <li>Eight rock-cut water cisterns</li>
+    <li>Panoramic views of nearby forts and hills</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    The ideal time to visit Harihargad Fort is during the winter months (October to February) when the weather is cool and clear, offering the best trekking experience.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://www.trekhievers.com/tours/harihar-fort-trek-99675" alt="Harihar Fort" onclick="openLightbox(this.src)" />
+    <img src="https://www.thefreebird.net/treks/harihar-fort-trek-blog" alt="Harihar Fort Trek" onclick="openLightbox(this.src)" />
+    <img src="https://www.instagram.com/reel/C-Cm9Lhoyjj/" alt="Harihar Fort Steps" onclick="openLightbox(this.src)" />
+    <img src="https://www.instagram.com/p/Ct24IkypfRI/" alt="Harihar Fort View" onclick="openLightbox(this.src)" />
+    <img src="https://www.maharashtragadkille.com/harihar" alt="Harihar Fort Summit" onclick="openLightbox(this.src)" />
+    <img src="https://www.treksandtrails.org/tours/harihar-fort-trek" alt="Harihar Fort Trekking" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

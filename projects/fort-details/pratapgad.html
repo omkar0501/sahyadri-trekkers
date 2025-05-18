@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pratapgad Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Pratapgad Fort</h1>
+
+  <p>
+    Pratapgad Fort is a historic hill fort located in the Western Ghats of Maharashtra, near Satara. It is famous for the decisive battle fought here in 1659 between Shivaji Maharaj and Afzal Khan.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Built by Shivaji Maharaj in 1656, Pratapgad was strategically important in defending the Maratha kingdom.
+    The fort is renowned for the Battle of Pratapgad, where Shivaji Maharaj defeated the powerful Adil Shahi general Afzal Khan.
+  </p>
+
+  <h3>Trekking and Accessibility</h3>
+  <p>
+    The fort is accessible via a moderate trek from the nearby village of Par.
+    Visitors can also reach it by road, and the trek offers beautiful views of the surrounding hills and valleys.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Statue of Shivaji Maharaj at the entrance</li>
+    <li>Pratapgad Battle Memorial</li>
+    <li>Old temples and bastions</li>
+    <li>Panoramic views of the Western Ghats</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    The best time to visit Pratapgad Fort is from October to March when the weather is cool and pleasant.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Pratapgad_fort_Satara.jpg" alt="Pratapgad Fort View" onclick="openLightbox(this.src)" />
+    <img src="https://www.trekshitiz.com/trekshitiz/marathi/Pratapgad_Fort_1.jpg" alt="Statue of Shivaji Maharaj" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/55/36/11/pratapgad-fort.jpg" alt="Battle Memorial" onclick="openLightbox(this.src)" />
+    <img src="https://i.ytimg.com/vi/t1X47Q_nHKw/maxresdefault.jpg" alt="Fort Walls" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-w/1a/b6/c1/cd/pratapgad-fort.jpg" alt="Trekking Path" onclick="openLightbox(this.src)" />
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/Pratapgad_Fort_20190110164657.jpg" alt="View from Fort" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

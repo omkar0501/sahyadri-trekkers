@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visapur Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Visapur Fort</h1>
+
+  <p>
+    Visapur Fort is a hill fort located near Lonavala in the Pune district. It stands tall adjacent to Lohagad Fort and is popular for its scenic trekking routes and rich history.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Built in the early 18th century by Balaji Vishwanath, the first Peshwa of the Maratha Empire, Visapur Fort served as an important military post.
+    The fort was later captured and rebuilt by the British during their rule.
+  </p>
+
+  <h3>Trekking and Accessibility</h3>
+  <p>
+    The trek to Visapur Fort is moderately difficult and often combined with a visit to Lohagad Fort.
+    The route offers beautiful views of the Sahyadri mountain range, especially during the monsoon season.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Ruins of the old fortifications and bastions</li>
+    <li>Water cisterns that retain rainwater</li>
+    <li>Scenic viewpoints overlooking the Western Ghats</li>
+    <li>Proximity to Lohagad Fort for combined trekking</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    The best time to visit Visapur Fort is from June to September during the monsoon when the landscape is lush green and the weather is cool.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Visapur_fort_lonavala.JPG" alt="Visapur Fort View" onclick="openLightbox(this.src)" />
+    <img src="https://www.trekshitiz.com/trekshitiz/marathi/Visapur_Fort_Entrance.JPG" alt="Fort Entrance" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/01/5d/2e/photo1jpg.jpg" alt="Ruins and Bastions" onclick="openLightbox(this.src)" />
+    <img src="https://i.ytimg.com/vi/MYx7I6M8a_4/maxresdefault.jpg" alt="Viewpoint" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/6e/44/90/visapur-fort.jpg" alt="Trekking Path" onclick="openLightbox(this.src)" />
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/Visapur_Fort_20190110165351.jpg" alt="Fort Walls" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

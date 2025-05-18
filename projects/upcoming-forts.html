@@ -1,291 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Upcoming Forts - Sawai Trekkers</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .fort-card img {
-      height: 200px;
-      object-fit: cover;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viewed Forts - Sawai Trekkers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-  <div class="container">
-    <a class="navbar-brand" href="#">Sawai Trekkers</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="viewed-forts.html">Viewed Forts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Upcoming Forts</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Fort Cards -->
-<div class="container my-5">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <!-- Start of all forts -->
-    <!-- Format: Fort Name - Image - Short Description -->
-
-    <!-- 1 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Harishchandragad_Fort.jpg" class="card-img-top" alt="Harishchandragad">
-        <div class="card-body">
-          <h5 class="card-title">Harishchandragad</h5>
-          <p class="card-text">Famous for Konkan Kada and ancient caves.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="index.html">Sawai Trekkers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="viewed-forts.html">Viewed Forts</a></li>
+          <li class="nav-item"><a class="nav-link" href="upcoming-forts.html">Upcoming Forts</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-fort.html">Add Fort</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <!-- 2 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://trekshitiz.com/trekshitiz/marathi/Indrai-main.jpg" class="card-img-top" alt="Indrai">
-        <div class="card-body">
-          <h5 class="card-title">Indrai</h5>
-          <p class="card-text">Rock-cut steps and panoramic views in Nashik.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Upcoming Forts</h2>
+      <div class="row g-4">
+
+        <!-- Harishchandragad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://vl-prod-static.b-cdn.net/system/images/000/605/628/37eaebc41366ef50c436d8926c966c43/x1000gt/IMG_2024.jpeg?1657025509" class="card-img-top" alt="Harishchandragad" />
+            <div class="card-body">
+              <h5 class="card-title">Harishchandragad</h5>
+              <p class="card-text">Ancient fort with caves and the famous Konkan Kada cliff offering breathtaking views.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Tikona -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://static2.tripoto.com/media/filter/tst/img/1809849/TripDocument/1611379942_img_20201129_wa0191.jpg" class="card-img-top" alt="Tikona" />
+            <div class="card-body">
+              <h5 class="card-title">Tikona</h5>
+              <p class="card-text">A triangular hill fort known for its scenic views and historical caves.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vasota -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://vl-prod-static.b-cdn.net/system/images/000/459/220/e5f8b440bdeedf3469137c9705ccad27/x1000gt/eee301bf-ec92-480e-8468-9c931ad99a7c.jpg?1605267069" class="card-img-top" alt="Vasota" />
+            <div class="card-body">
+              <h5 class="card-title">Vasota</h5>
+              <p class="card-text">Remote fort surrounded by dense forests and known for its serene trekking trails.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Korigad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://vl-prod-static.b-cdn.net/system/images/000/748/213/5beb93d0a1bb3509d257ec2dc1bd72df/original/korigad_trek.jpg?1711029288" class="card-img-top" alt="Korigad" />
+            <div class="card-body">
+              <h5 class="card-title">Korigad</h5>
+              <p class="card-text">A hill fort famous for its strong walls and the nearby serene lake.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vijaygurg -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://www.aroundpune.com/wp-content/uploads/2018/10/Vijaydurg_Banner.jpg" class="card-img-top" alt="Vijaygurg" />
+            <div class="card-body">
+              <h5 class="card-title">Vijaygurg</h5>
+              <p class="card-text">Known for its strategic location and rich historical significance.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sindhudurg -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqHofnJR7dFWXJ-Lzf77o2bkGC5RzoGj6axQ&s" class="card-img-top" alt="Sindhudurg" />
+            <div class="card-body">
+              <h5 class="card-title">Sindhudurg</h5>
+              <p class="card-text">Sea fort built by Shivaji Maharaj, famous for its fortifications and coastal views.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indrai -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://durgbharari.in/wp-content/uploads/2020/09/IMG_20191103_100321.jpg" class="card-img-top" alt="Indrai" />
+            <div class="card-body">
+              <h5 class="card-title">Indrai</h5>
+              <p class="card-text">A fort with picturesque views surrounded by dense forests and valleys.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Madangad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://static.wixstatic.com/media/9716d0_13e7fbfe7be541939a26fb33adceaf6a~mv2.jpg/v1/fill/w_566,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/9716d0_13e7fbfe7be541939a26fb33adceaf6a~mv2.jpg" class="card-img-top" alt="Madangad" />
+            <div class="card-body">
+              <h5 class="card-title">Madangad</h5>
+              <p class="card-text">Challenging fort trek with steep climbs and stunning views from the top.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vijaydurg -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://i.pinimg.com/1200x/bf/6b/53/bf6b5394ae0670f96dbd0772b2ac21c1.jpg" class="card-img-top" alt="Vijaydurg" />
+            <div class="card-body">
+              <h5 class="card-title">Vijaydurg</h5>
+              <p class="card-text">Historic sea fort with strong defenses and beautiful beach views.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suvarndurg -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://www.hindujagruti.org/wp-content/uploads/2015/02/Suvarnadurg_Fort_640.jpg" class="card-img-top" alt="Suvarndurg" />
+            <div class="card-body">
+              <h5 class="card-title">Suvarndurg</h5>
+              <p class="card-text">Coastal fort known for its golden sand beaches and scenic beauty.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malhargad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://amitkul.in/wp-content/uploads/2021/09/WebMalhargad-008.jpg" class="card-img-top" alt="Malhargad" />
+            <div class="card-body">
+              <h5 class="card-title">Malhargad</h5>
+              <p class="card-text">Hill fort offering panoramic views and historical temples at the summit.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rohida -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://tripxl.com/blog/wp-content/uploads/2024/10/Rohida-Fort-Cover-Photo.jpg" class="card-img-top" alt="Rohida" />
+            <div class="card-body">
+              <h5 class="card-title">Rohida</h5>
+              <p class="card-text">Fort with a scenic lake nearby and a peaceful trekking experience.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kalavantindurg -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://static2.tripoto.com/media/filter/tst/img/267346/SpotDocument/1512026413_1512018830_screen_shot_2017_11_30_at_10_43_08_am.png" class="card-img-top" alt="Kalavantindurg" />
+            <div class="card-body">
+              <h5 class="card-title">Kalavantindurg</h5>
+              <p class="card-text">Small coastal fort with historical ruins and beautiful sea views.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sajjangad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_sgHuVrMkb7M74kKTIeVOlmRAIjSl48Y0Tg&s" class="card-img-top" alt="Sajjangad" />
+            <div class="card-body">
+              <h5 class="card-title">Sajjangad</h5>
+              <p class="card-text">Fort famous as the samadhi of saint Ramdas with peaceful surroundings.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vishalgad -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://vajiram-prod.s3.ap-south-1.amazonaws.com/Vishalgad_Fort_539959ed48.webp" class="card-img-top" alt="Vishalgad" />
+            <div class="card-body">
+              <h5 class="card-title">Vishalgad</h5>
+              <p class="card-text">Large fort known for its fortifications and historical importance.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ajinkyatara -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://cdn-llclb.nitrocdn.com/BnKaeEwlyNNWRJByEkuceRuVpHoZIptK/assets/images/optimized/rev-183c1dc/kaspatharflowervalley.com/wp-content/uploads/2023/06/ajinkyatara-1.jpg" class="card-img-top" alt="Ajinkyatara" />
+            <div class="card-body">
+              <h5 class="card-title">Ajinkyatara</h5>
+              <p class="card-text">Fort overlooking Satara city, known for its history and scenic beauty.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lingana -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://www.treksandtrails.org/system/images/000/374/880/28c2735dd30801e43badfd1096bd904d/original/Lingana-Fort-Climbing.jpg?1615648811" class="card-img-top" alt="Lingana" />
+            <div class="card-body">
+              <h5 class="card-title">Lingana</h5>
+              <p class="card-text">Challenging trek with steep cliffs and ancient fort ruins.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rajmachi -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjDIabqrlq7m4ydXR_ETlmdtVZU-m52HbZZQ&s" class="card-img-top" alt="Rajmachi" />
+            <div class="card-body">
+              <h5 class="card-title">Rajmachi</h5>
+              <p class="card-text">Popular fort with twin peaks and great trekking routes.</p>
+              <a href="#" class="btn btn-success">View Details</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <!-- 3 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Tikona_fort.jpg" class="card-img-top" alt="Tikona">
-        <div class="card-body">
-          <h5 class="card-title">Tikona</h5>
-          <p class="card-text">Pyramid-shaped fort near Lonavala.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/9e/b1/83/madangad-fort.jpg" class="card-img-top" alt="Madangad">
-        <div class="card-body">
-          <h5 class="card-title">Madangad</h5>
-          <p class="card-text">Challenging climb, scenic Sahyadri beauty.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Vasota_Fort_View.jpg" class="card-img-top" alt="Vasota">
-        <div class="card-body">
-          <h5 class="card-title">Vasota</h5>
-          <p class="card-text">Jungle fort near Koyna backwaters.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Korigad.jpg" class="card-img-top" alt="Korigad">
-        <div class="card-body">
-          <h5 class="card-title">Korigad</h5>
-          <p class="card-text">Lake at the top and fort walls intact.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://www.maharashtratourism.gov.in/documents/10181/267771/Vijaydurg+Fort.jpg" class="card-img-top" alt="Vijaydurg">
-        <div class="card-body">
-          <h5 class="card-title">Vijaydurg</h5>
-          <p class="card-text">Sea fort built by Shivaji Maharaj.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Sindhudurg.jpg" class="card-img-top" alt="Sindhudurg">
-        <div class="card-body">
-          <h5 class="card-title">Sindhudurg</h5>
-          <p class="card-text">Historic sea fort off Malvan coast.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://static2.tripoto.com/media/filter/nl/img/321546/TripDocument/1493828855_1493828848_suvarnadurg_fort_2.jpg" class="card-img-top" alt="Suvarndurg">
-        <div class="card-body">
-          <h5 class="card-title">Suvarndurg</h5>
-          <p class="card-text">Golden fort on Arabian Sea waters.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Malhargad.jpg" class="card-img-top" alt="Malhargad">
-        <div class="card-body">
-          <h5 class="card-title">Malhargad</h5>
-          <p class="card-text">Near Pune, scenic fort with temples.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 11 to 20 (Alang to Rohida) -->
-    <!-- Alang -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-s/13/45/88/fc/alang-fort.jpg" class="card-img-top" alt="Alang">
-        <div class="card-body">
-          <h5 class="card-title">Alang</h5>
-          <p class="card-text">One of toughest Sahyadri treks.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tung -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Tung_fort.jpg" class="card-img-top" alt="Tung">
-        <div class="card-body">
-          <h5 class="card-title">Tung</h5>
-          <p class="card-text">Small, pointed peak near Pawna lake.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Prabalgad -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Prabalgad_view_from_Kalavantin.jpg" class="card-img-top" alt="Prabalgad">
-        <div class="card-body">
-          <h5 class="card-title">Prabalgad</h5>
-          <p class="card-text">Lies between Matheran and Panvel.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sajjangad -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Sajjangad_Fort.jpg" class="card-img-top" alt="Sajjangad">
-        <div class="card-body">
-          <h5 class="card-title">Sajjangad</h5>
-          <p class="card-text">Final resting place of Samarth Ramdas Swami.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Vishalgad -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://www.konkan.me/wp-content/uploads/2020/10/Vishalgad.jpg" class="card-img-top" alt="Vishalgad">
-        <div class="card-body">
-          <h5 class="card-title">Vishalgad</h5>
-          <p class="card-text">Historic escape of Shivaji Maharaj happened here.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ajinkyatara -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Ajinkyatara.jpg" class="card-img-top" alt="Ajinkyatara">
-        <div class="card-body">
-          <h5 class="card-title">Ajinkyatara</h5>
-          <p class="card-text">Fort above Satara city with a watchtower.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lingana -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Lingana.jpg" class="card-img-top" alt="Lingana">
-        <div class="card-body">
-          <h5 class="card-title">Lingana</h5>
-          <p class="card-text">Vertical rock peak, extremely tough climb.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rajmachi -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Rajmachi_Fort.jpg" class="card-img-top" alt="Rajmachi">
-        <div class="card-body">
-          <h5 class="card-title">Rajmachi</h5>
-          <p class="card-text">Twin forts near Lonavala, easy night trek.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rohida Fort -->
-    <div class="col">
-      <div class="card fort-card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Rohida_fort.jpg" class="card-img-top" alt="Rohida">
-        <div class="card-body">
-          <h5 class="card-title">Rohida Fort</h5>
-          <p class="card-text">Fort near Bhor, good for beginners.</p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <p>Contact: omkar.jadhav7804@gmail.com | 📷 Instagram: mr._omraj_0501_</p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lohgad Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Lohgad Fort</h1>
+
+  <p>
+    Lohgad Fort, situated about 52 km from Pune, is one of the most popular trekking destinations in the Sahyadri ranges.
+    The fort’s name means "Iron Fort," reflecting its strength and strategic importance.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Lohgad played a key role during the Maratha period and was used as a watchtower to guard the trade routes.
+    It was captured by Shivaji Maharaj in the 17th century and was an important part of the Maratha defense network.
+  </p>
+
+  <h3>Trekking and Accessibility</h3>
+  <p>
+    The fort is accessible via a moderate trekking route starting from the base village of Malavli.
+    The path includes scenic views, rock-cut steps, and the famous Lohgad caves.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Ganesh Gate – the main entrance</li>
+    <li>Historic water cisterns</li>
+    <li>Lohgad caves near the base</li>
+    <li>Views of the Pawna Reservoir and surrounding hills</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    The best time to visit Lohgad Fort is between October and February, when the weather is cool and the landscape is lush green after monsoon rains.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Lohgad_fort.jpg" alt="Lohgad Fort Top View" onclick="openLightbox(this.src)" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Lohgad_fort_entrance.jpg" alt="Fort Entrance" onclick="openLightbox(this.src)" />
+    <img src="https://www.trekshitiz.com/trekshitiz/marathi/Lohgad-Trek-3.jpg" alt="Trekking Path" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/7c/46/f0/lohagad-fort.jpg" alt="View from Fort" onclick="openLightbox(this.src)" />
+    <img src="https://i.ytimg.com/vi/cf38nqINcIU/maxresdefault.jpg" alt="Fort Walls" onclick="openLightbox(this.src)" />
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/Lohgad_Fort_20190114114738.jpg" alt="Lohgad Ruins" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

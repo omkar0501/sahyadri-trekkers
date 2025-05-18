@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Purandar Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Purandar Fort</h1>
+
+  <p>
+    Purandar Fort is located about 50 km southeast of Pune and holds great historical and strategic significance in Maharashtra.
+    This fort is well known as the birthplace of Sambhaji Maharaj, the son of Chhatrapati Shivaji Maharaj.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Purandar Fort played a major role during the Maratha era and was a stronghold of the Maratha Empire.
+    In 1665, the Treaty of Purandar was signed here between Shivaji Maharaj and the Mughal general Jai Singh.
+    It is also noted for being a military training base during the British rule.
+  </p>
+
+  <h3>Trekking and Accessibility</h3>
+  <p>
+    The fort can be reached by road, and there is also a moderately difficult trekking route starting from Narayanpur village.
+    The trek is scenic, with a well-marked trail leading to the top, making it a rewarding experience for hikers.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Kedareshwar Temple</li>
+    <li>Statue of Murarbaji Deshpande</li>
+    <li>Panoramic views of the surrounding Sahyadri hills</li>
+    <li>Ruins of old military buildings from British times</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    The best time to visit Purandar Fort is during the monsoon and winter months, from June to February, when the landscape is lush and the weather is pleasant for trekking.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Purandar_fort_top_view.jpg" alt="Fort Top View" onclick="openLightbox(this.src)" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Purandar_fort_entrance.jpg" alt="Fort Entrance" onclick="openLightbox(this.src)" />
+    <img src="https://www.trekshitiz.com/trekshitiz/marathi/Purandar-Trek-3.jpg" alt="Trekking Path" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/80/bd/1a/purandar-fort.jpg" alt="Hill View" onclick="openLightbox(this.src)" />
+    <img src="https://i.ytimg.com/vi/IcRNdNE-CDA/maxresdefault.jpg" alt="Fort Walls" onclick="openLightbox(this.src)" />
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/10155_20190418145444.jpg" alt="Ruins" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

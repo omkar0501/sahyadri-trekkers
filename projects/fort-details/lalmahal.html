@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lal Mahal Pune Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox Styling */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .lightbox-overlay .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Lal Mahal Pune</h1>
+
+  <p>
+    Lal Mahal, meaning "Red Palace," is a historic monument located in Pune, Maharashtra.
+    It was originally built by Chhatrapati Shivaji Maharaj's father, Shahaji Raje, in the 17th century,
+    and served as an important center of Maratha power.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    Lal Mahal is famous as the place where Shivaji Maharaj spent his childhood.
+    The palace played a key role in the Maratha resistance against the Mughal Empire.
+    Though the original structure was destroyed, the current building is a reconstructed version preserving its legacy.
+  </p>
+
+  <h3>Visiting Information</h3>
+  <p>
+    Lal Mahal is located in the heart of Pune city and is easily accessible by road.
+    Visitors can explore the palace grounds, the museum, and enjoy cultural exhibitions.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Statue of Shivaji Maharaj</li>
+    <li>Reconstructed palace showcasing Maratha architecture</li>
+    <li>Exhibitions on Maratha history and culture</li>
+    <li>Beautiful gardens around the palace</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    Lal Mahal can be visited year-round, with the best time being from October to February for pleasant weather.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Lal_Mahal_Pune_2016.jpg" alt="Lal Mahal Front View" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/7a/c1/9c/lal-mahal.jpg" alt="Statue of Shivaji Maharaj" onclick="openLightbox(this.src)" />
+    <img src="https://www.tourmyindia.com/states/maharashtra/images/lal-mahal-pune-1.jpg" alt="Palace Interior" onclick="openLightbox(this.src)" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Lal_Mahal_Interior.jpg" alt="Inside View" onclick="openLightbox(this.src)" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Lal_Mahal_Garden.jpg" alt="Garden Area" onclick="openLightbox(this.src)" />
+    <img src="https://media-cdn.tripadvisor.com/media/photo-w/0d/7b/bb/34/lal-mahal.jpg" alt="Entrance Gate" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+

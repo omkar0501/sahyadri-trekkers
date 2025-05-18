@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torna Fort Details</title>
+  <style>
+    body {
+      background-color: #e6f2ff; /* faint sky blue */
+      color: #000;
+      font-family: Arial, sans-serif;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      background-clip: padding-box;
+    }
+
+    h1.fort-name {
+      color: orange;
+      font-weight: bold;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border-bottom: 2px solid orange;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .back-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .back-button:hover {
+      background-color: darkorange;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid #fff;
+      border-radius: 10px;
+    }
+
+    #lightbox:after {
+      content: '✖';
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="fort-name">Torna Fort (Prachandgad)</h1>
+
+  <p>
+    Torna Fort, also known as Prachandgad, is one of the highest forts in Maharashtra located in the Pune district.
+    It holds a special place in Maratha history as the first fort captured by Chhatrapati Shivaji Maharaj in 1643 at the young age of 16.
+  </p>
+
+  <h3>Historical Significance</h3>
+  <p>
+    The fort played a vital role in Shivaji Maharaj’s early conquests and served as a strategic point due to its commanding height and natural defenses.
+    It was later fortified further by Shivaji after capturing it from the Adil Shahi dynasty.
+  </p>
+
+  <h3>Trekking Experience</h3>
+  <p>
+    Trekking to Torna Fort is a thrilling experience for adventure seekers. The path is moderately difficult, with steep ascents and narrow ridges.
+    Trekkers are rewarded with stunning views of the Sahyadri ranges and lush greenery, especially during the monsoon.
+  </p>
+
+  <h3>Key Attractions</h3>
+  <ul>
+    <li>Zunjar Machi and Budhla Machi – famous defense outposts</li>
+    <li>Temples of Mengai Devi and Toranjai Devi</li>
+    <li>Massive stone walls and bastions</li>
+    <li>Wide plateaus at the top for resting and exploring</li>
+  </ul>
+
+  <h3>Best Time to Visit</h3>
+  <p>
+    Monsoon and post-monsoon seasons (June to February) are best for visiting, offering cool weather, misty views, and blooming flora.
+  </p>
+
+  <div class="photo-grid">
+    <img src="https://www.treksandtrails.org/system/images/000/411/131/bc808389377ea7a94f3a9de318c2b38e/original/Zunzar_Machi_at_Torna.jpg?1603474068" alt="Zunjar Machi at Torna Fort" onclick="openLightbox(this.src)" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Torna_Fort.JPG/1024px-Torna_Fort.JPG" alt="Torna Fort View" onclick="openLightbox(this.src)" />
+    <img src="https://www.trekshitiz.com/trekshitiz/marathi/Torna-Trek-2.jpg" alt="Trekking Path at Torna Fort" onclick="openLightbox(this.src)" />
+    <img src="https://cdn.s3waas.gov.in/s3b65e49943b3ed5f3c9cd5f3a3b9607b7/uploads/2020/10/2020100711.jpg" alt="Torna Fort Walls" onclick="openLightbox(this.src)" />
+    <img src="https://images.pexels.com/photos/634801/pexels-photo-634801.jpeg" alt="Nature Around Torna Fort" onclick="openLightbox(this.src)" />
+    <img src="https://www.holidify.com/images/cmsuploads/compressed/Torna-Fort_20190104144630.jpg" alt="Torna Fort Plateau" onclick="openLightbox(this.src)" />
+  </div>
+
+  <a href="../viewed-forts.html" class="back-button">← Back</a>
+
+  <!-- Lightbox viewer -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded View" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
+
