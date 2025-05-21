@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navbar same as homepage -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold text-success" href="index.html">Sawai Trekkers</a>
@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="viewed-forts.html">Viewed Forts</a></li>
+          <li class="nav-item"><a class="nav-link" href="viewed-forts.html">Viewed Forts</a></li>
           <li class="nav-item"><a class="nav-link" href="upcoming-forts.html">Upcoming Forts</a></li>
           <li class="nav-item"><a class="nav-link" href="add-fort.html">Add Fort</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -40,7 +40,7 @@
             <div class="card-body">
               <h5 class="card-title">Shivneri Fort</h5>
               <p class="card-text">Birthplace of Chhatrapati Shivaji Maharaj</p>
-              <a href="details.html" class="btn btn-success">View Details</a>
+              <a href="fort-details/shivneri.html" class="btn btn-success">View Details</a>
             </div>
           </div>
         </div>
@@ -183,36 +183,31 @@
             <img src="https://vl-prod-static.b-cdn.net/system/images/000/716/039/8f7673f17e94d788e69dfc5746f3efe4/x1000gt/40973642_2207576799518558_7640654177139425280_n.jpg?1698493142" class="card-img-top" alt="Harihargad" />
             <div class="card-body">
               <h5 class="card-title">Harihargad</h5>
-              <p class="card-text">Fort near Bhandardara</p>
+              <p class="card-text">Serene and peaceful fort</p>
               <a href="fort-details/harihargad.html" class="btn btn-success">View Details</a>
             </div>
           </div>
         </div>
-
-        <!-- Panhalgad -->
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="https://media2.thrillophilia.com/images/photos/000/030/600/original/panhalgad_cover.jpg?" class="card-img-top" alt="Panhalgad" />
-            <div class="card-body">
-              <h5 class="card-title">Panhalgad</h5>
-              <p class="card-text">Fort near Kolhapur</p>
-              <a href="fort-details/panhalgad.html" class="btn btn-success">View Details</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-3 bg-light text-center border-top">
-    <small>© 2025 Sawai Trekkers | 📧 omkar.jadhav7804@gmail.com | 📞 +91 8698231143 | 📷 
-      <a href="https://www.instagram.com/mr._omraj_0501_/" target="_blank">mr._omraj_0501_</a>
-    </small>
-  </footer>
-
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dynamic Active Nav Link Script -->
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const currentPage = location.pathname.split("/").pop();
+
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active', 'text-success', 'fw-bold');
+      } else {
+        link.classList.remove('active', 'text-success', 'fw-bold');
+      }
+    });
+  </script>
 </body>
 </html>
 
